@@ -2,7 +2,7 @@
 # 𝕴𝖑𝖑𝖚𝖒𝖎
 # 𝟔𝟔𝟔
 
-# 𝐈𝐍𝐒𝐓𝐀𝐋𝐋.𝐒𝐇
+# 𝐂𝐔𝐒𝐓𝐎𝐌𝐈𝐙𝐄.𝐒𝐇
 
 # 𝐒𝐄𝐓
 SKIPMOUNT=false
@@ -131,6 +131,7 @@ echo "× 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗶𝗻𝗴 𝗺𝗼𝗱𝘂𝗹𝗲 𝗳�
 on_install() {
 unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 unzip -o "$ZIPFILE" 'common/*' -d $MODPATH >&2
+unzip -o "$ZIPFILE" 'Game' -d $MODPATH >&2
 }
 sleep 1
 
