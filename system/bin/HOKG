@@ -1,0 +1,39 @@
+# ILLUMI
+# DEMONICA
+# www.bento.me/illumi
+
+# EXECUTE SCRIPT BY TYTYDRACO AND HIS PROJECT 
+write() {
+	[[ ! -f "$1" ]] && return 1
+	chmod +w "$1" 2> /dev/null
+	if ! echo "$2" > "$1" 2> /dev/null
+	then
+		echo "Failed: $1  $2"
+		return 1
+	fi
+}
+
+while [[ "$(getprop sys.boot_completed)" -ne 1 ]] && [[ ! -d "/sdcard" ]]
+do
+     sleep 1
+done ;
+
+##########################################################################################
+# BATAS SUCI :V
+##########################################################################################
+
+# HONOR OF KINGS GLOBAL
+echo "× 𝗢𝗣𝗧𝗜𝗠𝗜𝗭𝗘𝗗 𝗛𝗢𝗡𝗢𝗥 𝗢𝗙 𝗞𝗜𝗡𝗚 𝗚𝗟𝗢𝗕𝗔𝗟 "
+sleep 2
+hokg() {
+cmd game mode performance com.levelinfinite.sgameGlobal
+device_config put game_overlay com.levelinfinite.sgameGlobal mode=2,fps=120
+dumpsys deviceidle whitelist +com.levelinfinite.sgameGlobal
+appops set com.levelinfinite.sgameGlobal RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.levelinfinite.sgameGlobal
+cmd package compile -m speed --secondary-dex -f com.levelinfinite.sgameGlobal
+cmd package compile -m speed --check-prof false -f com.levelinfinite.sgameGlobal
+cmd package compile -r first-boot -f com.levelinfinite.sgameGlobal
+}
+hokg > /dev/null 2>&1
+echo "× 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬. "

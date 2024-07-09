@@ -16,6 +16,11 @@ set_perm_recursive $MODPATH 0 0 0755 0644
 set_perm  $MODPATH/system/bin/COC 0 0 0751 0755
 set_perm  $MODPATH/system/bin/CODM 0 0 0751 0755
 set_perm  $MODPATH/system/bin/HOK 0 0 0751 0755
+set_perm  $MODPATH/system/bin/HOKG 0 0 0751 0755
+set_perm  $MODPATH/system/bin/LOL 0 0 0751 0755
+set_perm  $MODPATH/system/bin/MLBB 0 0 0751 0755
+set_perm  $MODPATH/system/bin/FFMAX 0 0 0751 0755
+set_perm  $MODPATH/system/bin/FF 0 0 0751 0755
 
 # 𝐏𝐑𝐈𝐍𝐓𝐌𝐎𝐃𝐍𝐀𝐌𝐄
 CREATOR="𝗠𝗢𝗗𝗨𝗟𝗘 𝗕𝗬 𝗜𝗟𝗟𝗨𝗠𝗜 "

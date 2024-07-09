@@ -58,4 +58,74 @@ cmd package compile -r first-boot -f com.levelinfinite.sgameGlobal.midaspay
 }
 hok > /dev/null 2>&1
 
+sleep 20
+# HONOR OF KINGS GLOBAL 
+hokg() {
+cmd game mode performance com.levelinfinite.sgameGlobal
+device_config put game_overlay com.levelinfinite.sgameGlobal mode=2,fps=120
+dumpsys deviceidle whitelist +com.levelinfinite.sgameGlobal
+appops set com.levelinfinite.sgameGlobal RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.levelinfinite.sgameGlobal
+cmd package compile -m speed --secondary-dex -f com.levelinfinite.sgameGlobal
+cmd package compile -m speed --check-prof false -f com.levelinfinite.sgameGlobal
+cmd package compile -r first-boot -f com.levelinfinite.sgameGlobal
+}
+hokg > /dev/null 2>&1
+
+sleep 20
+# LEAGUE OF LEGENDS WILD RIFT
+lol() {
+cmd game mode performance com.riotgames.league.wildrift
+device_config put game_overlay com.riotgames.league.wildrift mode=2,fps=120
+dumpsys deviceidle whitelist +com.riotgames.league.wildrift
+appops set com.riotgames.league.wildrift RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.riotgames.league.wildrift
+cmd package compile -m speed --secondary-dex -f com.riotgames.league.wildrift
+cmd package compile -m speed --check-prof false -f com.riotgames.league.wildrift
+cmd package compile -r first-boot -f com.riotgames.league.wildrift
+}
+lol > /dev/null 2>&1
+
+sleep 20
+# MOBILE LEGENDS BANG BANG
+mlbb() {
+cmd game mode performance com.mobile.legends
+device_config put game_overlay com.mobile.legends mode=2,fps=120
+dumpsys deviceidle whitelist +com.mobile.legends
+appops set com.mobile.legends RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.mobile.legends
+cmd package compile -m speed --secondary-dex -f com.mobile.legends
+cmd package compile -m speed --check-prof false -f com.mobile.legends
+cmd package compile -r first-boot -f com.mobile.legends
+}
+mlbb > /dev/null 2>&1
+
+sleep 20
+# FIRE FREE MAX
+ffmax() {
+cmd game mode performance com.dts.freefiremax
+device_config put game_overlay com.dts.freefiremax mode=2,fps=120
+dumpsys deviceidle whitelist +com.dts.freefiremax
+appops set com.dts.freefiremax RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.dts.freefiremax
+cmd package compile -m speed --secondary-dex -f com.dts.freefiremax
+cmd package compile -m speed --check-prof false -f com.dts.freefiremax
+cmd package compile -r first-boot -f com.dts.freefiremax
+}
+ffmax > /dev/null 2>&1
+
+sleep 20
+# FIRE FREE
+ff() {
+cmd game mode performance com.dts.freefireth
+device_config put game_overlay com.dts.freefireth mode=2,fps=120
+dumpsys deviceidle whitelist +com.dts.freefireth
+appops set com.dts.freefireth RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.dts.freefireth
+cmd package compile -m speed --secondary-dex -f com.dts.freefireth
+cmd package compile -m speed --check-prof false -f com.dts.freefireth
+cmd package compile -r first-boot -f com.dts.freefireth
+}
+ff > /dev/null 2>&1
+
 done
