@@ -1,0 +1,39 @@
+# ILLUMI
+# DEMONICA
+# www.bento.me/illumi
+
+# EXECUTE SCRIPT BY TYTYDRACO AND HIS PROJECT 
+write() {
+	[[ ! -f "$1" ]] && return 1
+	chmod +w "$1" 2> /dev/null
+	if ! echo "$2" > "$1" 2> /dev/null
+	then
+		echo "Failed: $1  $2"
+		return 1
+	fi
+}
+
+while [[ "$(getprop sys.boot_completed)" -ne 1 ]] && [[ ! -d "/sdcard" ]]
+do
+     sleep 1
+done ;
+
+##########################################################################################
+# BATAS SUCI :V
+##########################################################################################
+
+# NEW STATE : NEW ERA OF BR
+echo "× 𝗢𝗣𝗧𝗜𝗠𝗜𝗭𝗘𝗗 𝗡𝗘𝗪 𝗦𝗧𝗔𝗧𝗘 𝗡𝗘𝗪 𝗘𝗥𝗔 𝗢𝗙 𝗕𝗥 "
+sleep 2
+news() {
+cmd game mode performance com.pubg.newstate
+device_config put game_overlay com.pubg.newstate mode=2,fps=120
+dumpsys deviceidle whitelist +com.pubg.newstate
+appops set com.pubg.newstate RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.pubg.newstate
+cmd package compile -m speed --secondary-dex -f com.pubg.newstate
+cmd package compile -m speed --check-prof false -f com.pubg.newstate
+cmd package compile -r first-boot -f com.pubg.newstate
+}
+news > /dev/null 2>&1
+echo "× 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬. "

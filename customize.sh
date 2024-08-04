@@ -7,7 +7,7 @@
 # 𝐒𝐄𝐓
 SKIPMOUNT=false
 PROPFILE=false
-POSTFSDATA=false
+POSTFSDATA=true
 LATESTARTSERVICE=true
 # 𝐒𝐊𝐈𝐏 𝐔𝐍𝐙𝐈𝐏
 SKIPUNZIP=0
@@ -21,6 +21,9 @@ set_perm  $MODPATH/system/bin/LOL 0 0 0751 0755
 set_perm  $MODPATH/system/bin/MLBB 0 0 0751 0755
 set_perm  $MODPATH/system/bin/FFMAX 0 0 0751 0755
 set_perm  $MODPATH/system/bin/FF 0 0 0751 0755
+set_perm  $MODPATH/system/bin/PUBG 0 0 0751 0755
+set_perm  $MODPATH/system/bin/NEWS 0 0 0751 0755
+set_perm  $MODPATH/system/bin/GENS 0 0 0751 0755
 
 # 𝐏𝐑𝐈𝐍𝐓𝐌𝐎𝐃𝐍𝐀𝐌𝐄
 CREATOR="𝗠𝗢𝗗𝗨𝗟𝗘 𝗕𝗬 𝗜𝗟𝗟𝗨𝗠𝗜 "

@@ -22,18 +22,18 @@ done ;
 # BATAS SUCI :V
 ##########################################################################################
 
-# FIRE FREE
-echo "× 𝗢𝗣𝗧𝗜𝗠𝗜𝗭𝗘𝗗 𝗙𝗜𝗥𝗘 𝗙𝗥𝗘𝗘 "
+# PUBG MOBILE
+echo "× 𝗢𝗣𝗧𝗜𝗠𝗜𝗭𝗘𝗗 𝗣𝗨𝗕𝗚 𝗠𝗢𝗕𝗜𝗟𝗘 "
 sleep 2
-ff() {
-cmd game mode performance com.dts.freefireth
-device_config put game_overlay com.dts.freefireth mode=2,fps=120
-dumpsys deviceidle whitelist +com.dts.freefireth
-appops set com.dts.freefireth RUN_IN_BACKGROUND allow
-cmd package compile -m everything-profile -f com.dts.freefireth
-cmd package compile -m speed --secondary-dex -f com.dts.freefireth
-cmd package compile -m speed --check-prof false -f com.dts.freefireth
-cmd package compile -r first-boot -f com.dts.freefireth
+pubg() {
+cmd game mode performance com.pubg.imobile
+device_config put game_overlay com.pubg.imobile mode=2,fps=120
+dumpsys deviceidle whitelist +com.pubg.imobile
+appops set com.pubg.imobile RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.pubg.imobile
+cmd package compile -m speed --secondary-dex -f com.pubg.imobile
+cmd package compile -m speed --check-prof false -f com.pubg.imobile
+cmd package compile -r first-boot -f com.pubg.imobile
 }
-ff > /dev/null 2>&1
+pubg > /dev/null 2>&1
 echo "× 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬. "

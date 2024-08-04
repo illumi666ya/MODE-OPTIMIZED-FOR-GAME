@@ -41,6 +41,9 @@ lol
 mlbb
 ffmax
 ff
+pubg
+news
+gens
 
 sleep 20
 # CLASH OF CLAN
@@ -154,5 +157,47 @@ cmd package compile -r first-boot -f com.dts.freefireth
 }
 ff > /dev/null 2>&1
 
+sleep 20
+# PUBG MOBILE
+pubg() {
+cmd game mode performance com.pubg.imobile
+device_config put game_overlay com.pubg.imobile mode=2,fps=120
+dumpsys deviceidle whitelist +com.pubg.imobile
+appops set com.pubg.imobile RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.pubg.imobile
+cmd package compile -m speed --secondary-dex -f com.pubg.imobile
+cmd package compile -m speed --check-prof false -f com.pubg.imobile
+cmd package compile -r first-boot -f com.pubg.imobile
+}
+pubg > /dev/null 2>&1
+
+sleep 20
+# NEW STATE : NEW ERA OF BR
+news() {
+cmd game mode performance com.pubg.newstate
+device_config put game_overlay com.pubg.newstate mode=2,fps=120
+dumpsys deviceidle whitelist +com.pubg.newstate
+appops set com.pubg.newstate RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.pubg.newstate
+cmd package compile -m speed --secondary-dex -f com.pubg.newstate
+cmd package compile -m speed --check-prof false -f com.pubg.newstate
+cmd package compile -r first-boot -f com.pubg.newstate
+}
+news > /dev/null 2>&1
+
+sleep 20
+# GENSHIN IMPACT
+gens() {
+cmd game mode performance com.miHoYo.GenshinImpact
+device_config put game_overlay com.miHoYo.GenshinImpact mode=1,fps=60
+dumpsys deviceidle whitelist +com.pubg.newstate
+appops set com.miHoYo.GenshinImpact RUN_IN_BACKGROUND allow
+cmd package compile -m everything-profile -f com.miHoYo.GenshinImpact
+cmd package compile -m speed --secondary-dex -f com.miHoYo.GenshinImpact
+cmd package compile -m speed --check-prof false -f com.miHoYo.GenshinImpact
+cmd package compile -r first-boot -f com.miHoYo.GenshinImpact
+}
+gens > /dev/null 2>&1
+
 done
-exit 0
+exit 1
